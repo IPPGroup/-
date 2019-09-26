@@ -1,0 +1,59 @@
+*{
+	padding:0;
+	margin: 0;
+}
+#header{
+	padding-top: 40px;
+	width:100%;
+	position: fixed;
+}
+#back{
+	display: inline;
+	font-size: 60px;
+	padding-left: 30px;
+	display: inline-block;
+}
+
+
+#search {
+	padding-left: 40px;
+	display: inline-block;
+	width: 90%;
+	height: 100px;
+}
+#search *{
+	font-size: 40px;
+	height: 100%;
+}
+.input-group-prepend{
+	border-top-left-radius:50px;
+	border-bottom-left-radius:50px;
+	background-color: #efefef;
+}
+#search span{
+	border-top-left-radius:50px;
+	border-bottom-left-radius:50px;
+	background-color: #efefef;
+	color: #1781d7;
+	padding-left: 30px;
+}
+#search i{
+	padding-top: 17px;
+	padding-left: 10px;
+}
+#search input{
+	border-top-right-radius:50px;
+	border-bottom-right-radius:50px;
+}
+#colorBg{
+	height: 140%;
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	top:0;
+	left: 0;
+	background: -webkit-linear-gradient(bottom, rgba(13,145,255,0),rgba(13,145,255,1)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top, rgba(13,145,255,0),rgba(13,145,255,1)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top,rgba(13,145,255,0),rgba(13,145,255,1)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to top, rgba(13,145,255,0),rgba(13,145,255,1)); /* 标准的语法（必须放在最后） */
+}
