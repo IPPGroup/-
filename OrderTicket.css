@@ -1,0 +1,9 @@
+*{ padding:0px; margin:0px;list-style:none;}
+        .banner { width:100%; height:500px; margin:0; position:relative; overflow:hidden;}
+        .banner .img{width:7110px; position:absolute; left:0px;top:0px;height:450px;}
+        .banner .img img{width:1422px; height:450px;}
+        .banner .img li{float:left;}
+        .banner .num { position:absolute; width:100%; bottom:10px; left:0px; text-align:center; font-size:150px;}
+        .banner .num li { width:50px; height:10px; background-color:#888;display:inline-block; margin:0px 3px; cursor:pointer;}
+        .banner .num li.on {background-color: #c3c3c3;}
+        
