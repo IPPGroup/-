@@ -224,6 +224,8 @@
 		session.setAttribute("date", date); %>
 	</div>	
 <script src="./js/link1.js"></script>
+
+
 <a name="style"></a>
 <% for (int i=0;i<flag;i++){%>
 <div class="thr_top1">
