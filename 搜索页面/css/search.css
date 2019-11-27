@@ -1,0 +1,159 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+/*reset*/
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+iframe,img{border:none;}
+li{list-style:none;}
+a{text-decoration:none; color:black;}
+input,select,textarea{outline:none;}
+textarea{resize:none;}
+/*清除浮动*/
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+
+input{
+  outline: none;
+  border: none;
+}
+.head{
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  border-bottom: 1px solid grey;
+  background-color: white;
+}
+.head .back{
+  width: 10%;
+
+}
+.head .search-button{
+  width: 10%;
+  float: right;
+}
+.head .search-text{
+  width: 78%;
+  height: 85px;
+  float: left;
+  background-color: #ededed;
+  border-radius: 25px;
+}
+.back img{
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+.search-text input{
+  width: 80%;
+  height: 77px;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  margin-top: 5px;
+  background-color: #ededed;
+}
+.delete-icon{
+  width: 5%;
+  margin-top: 30px;
+  float: right;
+  opacity: 0;
+}
+.search-icon{
+  width: 10%;
+  margin-top:15px;
+  float: left;
+}
+.search-button input{
+  width: 90%;
+  height: 70px;
+  margin-top: 10px;
+  border: 0px;
+  background-color: white;
+  font-size: 30px;
+  color: #1E90FF;
+}
+.history,.recommend,.choiceness,.hotrank{
+  width: 100%;
+  margin-top: 20px;
+}
+.history span,.recommend span,.choiceness span,.hotrank span{
+  font-size: 40px;
+  font-weight: 600;
+  padding-left: 20px;
+}
+.history-tab,.recommand-tab{
+  padding: 15px;
+  width: 100%;
+}
+.history-tab div,.recommand-tab div{
+
+  padding: 12px;
+  margin-top: 30px;
+  display: inline-block;
+   border-radius: 25px;
+    border: 1px solid grey;
+}
+.recommand-tab a{
+  font-size: 30px;
+  background-color:white;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border-radius: 25px;
+}
+.history .clear{
+  float: right;
+  width: 20%;
+}
+.clear button{
+  width: 50%;
+  height: 50px;
+  border: none;
+  background-color: white;
+}
+.clear img{
+  width: 30%;
+}
+.hotel,.car,.cafe{
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+.hotrank li{
+  font-size: 30px;
+  font-weight: 400;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.hotrank a{
+  text-decoration: none;
+  color: black;
+}
+.choiceness .sub{
+  font-size: 30px;
+  font-weight: 400;
+}
+.choiceness div{
+  margin-top: 20px;
+  border-bottom: 1px solid grey;
+}
+.choiceness a{
+  text-decoration: none;
+  color: black;
+}
+.choiceness .img-box{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  border: none;
+}
+.img-box img{
+  width: 30%;
+  height: 200px;
+  border-radius: 15px;
+  margin-left: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

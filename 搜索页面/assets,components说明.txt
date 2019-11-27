@@ -1,0 +1,2 @@
+assets:就是img文件
+components：就是js文件

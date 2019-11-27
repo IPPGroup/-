@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>searchpage</title>
+    <link href="../css/search.css" rel="stylesheet">
+    <style>
+      .history-tab div,.recommand-tab div{
+
+        padding: 12px;
+        margin-top: 30px;
+        display: inline-block;
+         border-radius: 25px;
+          border: 1px solid grey;
+      }
+      .recommand-tab a,{
+        font-size: 30px;
+        background-color:white;
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        border-radius: 25px;
+      }
+      .history a{
+        font-size: 30px;
+      }
+
+    </style>
+	</head>
+	<body>
+    <div class="head">
+      <div class="back">
+        <a href="#"><img src="../assets/icon-test.png" /></a>
+      </div>
+      <div class="search-text">
+        <form action="searchresult" method="post" name="formName">
+          <img src="../assets/search.png" class="search-icon">
+          <input type="text" value="" name="inputName" class="input">
+          <img src="../assets/delete.jpg" class="delete-icon" onclick="clear()">
+        </form>
+      </div>
+      <div class="search-button">
+        <input type="submit" value="搜索">
+      </div>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="history">
+      <span>历史记录</span>
+      <div class="clear">
+        <button  class="clear-button" id="clear-button" onclick="clearHistory()" >
+          <img src="../assets/clear.jpg">
+        </button>
+      </div>
+      <div class="history-text"><p></p></div>
+      <div class="history-tab" id="history-tab">
+      </div>
+    </div>
+    <div class="recommend">
+      <span>搜索推荐</span>
+      <div class="recommand-tab">
+        <div>
+          <a href="#"><img src="../assets/图标.jpg" class="hotel">杭州乐园</a>
+        </div>
+        <div>
+          <a href="#">杭州动物园</a>
+        </div>
+        <div>
+          <a href="#"><img src="../assets/图标.jpg" class="hotel">酒店</a>
+        </div>
+        <div>
+          <a href="#"><img src="../assets/打车.png" class="car">汽车票</a>
+        </div>
+        <div>
+          <a href="#"><img src="../assets/餐饮.png" class="cafe">餐馆</a>
+        </div>
+        <div>
+          <a href="#"><img src="../assets/图标.jpg" class="hotel">汉庭酒店</a>
+        </div>
+        <div>
+          <a href="#"><img src="../assets/餐饮.png" class="cafe">星巴克</a>
+        </div>
+      </div>
+    </div>
+    <div class="choiceness">
+          <span>精选推荐</span>
+          <div>
+           <a href="#">
+            <span class="sub">
+              【杭州宋城景区·门票活动】看《宋城千古情》演出
+            </span>
+            <div class="img-box">
+              <img src="../assets/宋城.jpg"/>
+              <img src="../assets/宋城2.jpg"/>
+              <img src="../assets/宋城3.jpg"/>
+            </div>
+           </a>
+          </div>
+          <div>
+           <a href="#">
+            <span class="sub">
+              杭州博物馆，看宋代大运河，感受杭州百年老店风情
+            </span>
+            <div class="img-box">
+              <img src="../assets/museum1.jpeg"/>
+              <img src="../assets/museum2.jpeg"/>
+              <img src="../assets/museum5.png"/>
+            </div>
+           </a>
+          </div>
+          <div>
+           <a href="#">
+            <span class="sub">
+              杭州乐园，10月1日-11月30日，秋季主题活动“辣椒万圣节”
+            </span>
+            <div class="img-box">
+              <img src="../assets/hzly/1.png"/>
+              <img src="../assets/hzly/2.png"/>
+              <img src="../assets/hzly/3.jpg"/>
+            </div>
+           </a>
+          </div>
+          <div>
+           <a href="#">
+            <span class="sub">
+              西湖，又名西子，湖苏堤春晓，曲院风荷，平湖秋月，断桥残雪......
+            </span>
+            <div class="img-box">
+              <img src="../assets/Hot.jpg"/>
+              <img src="../assets/西湖.jpg"/>
+              <img src="../assets/西湖2.jpg"/>
+            </div>
+           </a>
+          </div>
+        </div>
+  </body>
+</html>
+<script src="../components/jquery.min.js"></script>
+<script src="../components/search.js"></script>
