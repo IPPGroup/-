@@ -5,15 +5,19 @@ import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@mdi/font/css/materialdesignicons.css'
 import Vuetify from 'vuetify/lib'
-import Router from 'vue-router'
+import router from './router'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
-Vue.use(Router)
-Vue.use(Vuetify)
+
+
+Vue.use(Vuetify);
+Vue.use(ElementUI);
 Vue.config.productionTip = false
 
 new Vue({
   vuetify,
-  Router,
+  router,
   render: h => h(App)
 }).$mount('#app')
 export default new Vuetify({
