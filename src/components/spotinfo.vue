@@ -40,7 +40,7 @@
 			</v-col>
 			<v-col cols="6">
 				<v-spacer></v-spacer>
-				<v-btn @click="goshowhotel()" color="primary">返回</v-btn>
+				<v-btn @click="goshowspot()" color="primary">返回</v-btn>
 			</v-col>
 		</v-row>
 	</v-card>
@@ -68,11 +68,9 @@
 				this.details = this.$route.query
 				this.textareText = this.details
 			},
-			goshowhotel(){
-				this.$router.push({path:'/mainpage/showhotel',query:{flag:true}})
-			},
+			
 			goshowspot(){
-				this.$router.push('/mainpage/showhotel')
+				this.$router.push('/mainpage/showspot')
 			}
 			
 		}

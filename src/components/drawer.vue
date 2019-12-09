@@ -130,7 +130,7 @@
 						</el-breadcrumb>
 					</div>
 				</v-card>
-				<router-view></router-view>	
+				<router-view></router-view>
 			</v-col>
 		</v-row>
 		</template>
@@ -154,8 +154,8 @@
 								['订单核销','mdi-file-document-box-remove-outline','/mainpage/deleteorder'],
 							],
 							accounts:[
-								['账号信息','mdi-account-key-outline','/mainpage/showaccount'],
-								['添加账号','mdi-account-plus-outline','/mainpage/addaccount']
+								['账号信息','mdi-account-key-outline','/mainpage/showadmin'],
+								['添加账号','mdi-account-plus-outline','/mainpage/addadmin']
 								
 							],
 					
@@ -172,8 +172,8 @@
 					getBreadcrumb() {
 						let matched = this.$route.matched.filter(item => item.name)
 						const first = matched[0];
-						if (first && first.name.trim().toLocaleLowerCase() !== '/'.toLocaleLowerCase()) {
-							matched = [{ path: '/', meta: { title: '首页' }}].concat(matched)
+						if (first && first.name.trim().toLocaleLowerCase() !== '/mianpage'.toLocaleLowerCase()) {
+							matched = [{ path: '/mainpage', meta: { title: '首页' }}].concat(matched)
 							}
 						this.levelList = matched
 					}

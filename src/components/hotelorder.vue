@@ -2,7 +2,7 @@
 	<v-card
 		width="100%" color="#EFEFED"
 	>
-	<v-container fluid>
+	<v-container fluid v-show="flag">
 		<v-col cols="12" sm="12">
 			<v-autocomplete  :items="components" label="search" outlined clearable></v-autocomplete>
 				<v-btn  class="ma-2"  color="blue darken-2"   large :loading="loading"  :disabled="loading" @click="loader = 'loading'">
@@ -31,6 +31,7 @@
 		<v-card-actions>
 			<v-btn
 				color="primary"
+				@click="gohotelorderinfo()"
 				>
 				详细信息
 			</v-btn>
@@ -45,6 +46,7 @@
 		</v-col>
 		</v-row>
 		</v-container>
+		<router-view v-show="flag1"></router-view>
 	</v-card>
 		
 </template>
@@ -53,6 +55,8 @@
 	export default{
 		data(){
 			return{
+				flag:true,
+				flag1:false,
 				loader: null,
 				loading: false,
 				confirm: false,
@@ -78,7 +82,24 @@
 		
 				this.loader = null
 			},
+			$route(from){
+				if(from.path=='/mainpage/hotelorder'){
+					this.flag=true;
+					
+					}
+				if(from.path=='/mainpage/hotelorder/hotelorderinfo'){
+					this.flag1=true;
+					
+					}
+				},
 			},
+			methods:{
+				gohotelorderinfo(){
+					this.flag = !this.flag
+					this.flag1 = !this.flag1
+					this.$router.push({path:'/mainpage/hotelorder/hotelorderinfo',query:{hotelname:'四季酒店',hotelID:'S003',hotelstarlevel:'五星'}})
+				}
+			}
 	}
 </script>
 

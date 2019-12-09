@@ -11,7 +11,12 @@ import ticketorder from '@/components/ticketorder'
 import hotelorder from '@/components/hotelorder'
 import login from '@/components/login'
 import register from '@/components/register'
-
+import hotelinfo from '@/components/hotelinfo'
+import showadmin from '@/components/showadmin'
+import spotinfo from '@/components/spotinfo'
+import hotelorderinfo from '@/components/hotelorderinfo'
+import ticketorderinfo from '@/components/ticketorderinfo'
+import addadmin from '@/components/addadmin'
 
 Vue.use(Router)
  
@@ -41,12 +46,14 @@ export default new Router({
 			component:showhotel,
 			name:'Showhotel',
 			meta:{title:'酒店信息管理',noCache: true},
+			children:[{path:'hotelinfo',component:hotelinfo,name:'Hotelinfo',meta:{title:'房间具体信息',noCache:true}}]
 		},
 		{
 			path:'showspot',
 			component:showspot,
 			name:'Showspot',
 			meta:{title:'景点信息管理',noCache: true},
+			children:[{path:'spotinfo',component:spotinfo,name:'Spotinfo',meta:{title:'门票具体信息',noCache:true}}]
 		},
 		{
 			path:'addspot',
@@ -59,12 +66,26 @@ export default new Router({
 			component:ticketorder,
 			name:'Ticketorder',
 			meta:{title:'门票订单',noCache: true},
+			children:[{path:'ticketorderinfo',component:ticketorderinfo,name:'Ticketorderinfo',meta:{title:'门票订单具体信息',noCache:true}}]
 		},
 		{
 			path:'hotelorder',
 			component:hotelorder,
 			name:'Hotelorder',
 			meta:{title:'酒店订单',noCache: true},
+			children:[{path:'hotelorderinfo',component:hotelorderinfo,name:'Hotelorderinfo',meta:{title:'酒店订单具体信息',noCache:true}}]
+		},
+		{
+			path:'showadmin',
+			component:showadmin,
+			name:'showadmin',
+			meta:{title:'账号信息',noCache: true},
+		},
+		{
+			path:'addadmin',
+			component:addadmin,
+			name:'addadmin',
+			meta:{title:'添加管理员信息',noCache: true},
 		},
 	],
 	},

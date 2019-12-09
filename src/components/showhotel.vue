@@ -1,7 +1,7 @@
 <template>
 	<v-card width="100%" color="#EFEFED">
 		
-		<v-container fluid>
+		<v-container fluid v-show="flag">
 			<v-col cols="12" sm="12">
 				<v-autocomplete  :items="components" label="search" outlined clearable></v-autocomplete>
 					<v-btn  class="ma-2"  color="blue darken-2"   large :loading="loading"  :disabled="loading" @click="loader = 'loading'">
@@ -24,29 +24,6 @@
 				</v-card-actions>
 				</v-card>
 			</v-col>
-			
-			<v-dialog v-model="detail" max-width="290">
-				<v-card>
-					<v-card-title class="detail">酒店具体信息</v-card-title>
-						<v-card-text>
-							景区编号：XXXXXXXX<br />
-							景区名称：XX景区<br />
-						</v-card-text>
-						<v-card-actions>
-							<v-spacer></v-spacer>
-						<v-btn color="primary" @click="detail=false" >
-							修改信息
-						</v-btn>
-			
-					<v-btn
-						color="error"
-						@click="detail = false"
-					>
-						关闭
-					</v-btn>
-					</v-card-actions>
-				</v-card>
-				</v-dialog>
 			
 			<v-dialog
 				v-model="confirm"
@@ -78,10 +55,9 @@
 					</v-card-actions>
 				</v-card>
 				</v-dialog>
-				
-			<router-view></router-view>
 		</v-row>
 		</v-container>
+		<router-view v-show="flag1"></router-view>
 	</v-card>
 	
 	</template>
@@ -93,6 +69,8 @@
 				return{
 				loader: null,
 				loading: false,
+				flag:true,
+				flag1:false,
 				confirm: false,
 				detail:false,
 				components: [
@@ -109,21 +87,36 @@
 				loader () {
 					const l = this.loader
 					this[l] = !this[l]
-			
 					setTimeout(() => (this[l] = false), 2000)
-			
 					this.loader = null
 				},
+				$route(from){
+					if(from.path=='/mainpage/showhotel'){
+						this.flag=true;
+						
+						}
+					if(from.path=='/mainpage/showhotel/hotelinfo'){
+						this.flag1=true;
+						
+						}
+					},
+				
 				},
+			created:{
+				
+			},
+				
 				methods:{
 					gohotelinfo(){
+						this.flag = !this.flag
+						this.flag1 = !this.flag1
 						this.$router.push({path:'/mainpage/showhotel/hotelinfo',query:{hotelname:'四季酒店',hotelID:'S001',hotelstarlevel:'五星'}})
 					}
 				}
-			
 		}
+		
 		</script>
-		<style>
+		<style scoped>
 			.custom-loader {
 				animation: loader 1s infinite;
 				display: flex;

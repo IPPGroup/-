@@ -28,7 +28,7 @@
 					<v-list-item>
 						
 						<v-list-item-title>
-							<p class="font-weight-black ">产品编号  :{{details.hotelID}}<v-btn color="#375D9B" @click="goshowspot()">点击查看产品</v-btn></p>
+							<p class="font-weight-black ">产品编号  :{{details.hotelID}}<v-btn color="#375D9B" @click="goshowhotel()">点击查看产品</v-btn></p>
 							
 							<p class="font-weight-black ">用户编号  :{{details.hotelID}}</p>
 							
@@ -40,7 +40,7 @@
 			</v-col>
 			<v-col cols="6">
 				<v-spacer></v-spacer>
-				<v-btn @click="goshowhotel()" color="primary">返回</v-btn>
+				<v-btn @click="gohotelorder()()" color="primary">返回</v-btn>
 			</v-col>
 		</v-row>
 	</v-card>
@@ -68,12 +68,13 @@
 				this.details = this.$route.query
 				this.textareText = this.details
 			},
-			goshowhotel(){
-				this.$router.push({path:'/mainpage/showhotel',query:{flag:true}})
+			
+			gohotelorder(){
+				this.$router.push('/mainpage/hotelorder')
 			},
-			goshowspot(){
+			goshowhotel(){
 				this.$router.push('/mainpage/showhotel')
-			}
+			},
 			
 		}
 	}
